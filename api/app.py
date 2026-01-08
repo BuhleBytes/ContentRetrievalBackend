@@ -682,7 +682,7 @@ if __name__ == '__main__':
     # Run Flask
     app.run(
         host='0.0.0.0',  # Listen on all network interfaces
-        port=5000,        # Port number
+        port=port,        # Port number
         debug=False,        # Enable debug mode (shows detailed errors)
         threaded=True,        # ← ADD THIS for concurrent requests!
         use_reloader=False  
