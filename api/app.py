@@ -172,7 +172,7 @@ def initialize_system():
         print(f"   ✓ Embedding dimensions: {embedding_dim}D")
 
         print("\n🗄️  Step 2: Loading ChromaDB...")
-        db_path = "../data/chromadb"
+        db_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'chromadb')
 
         if not os.path.exists(db_path):
             raise FileNotFoundError(
@@ -678,11 +678,12 @@ if __name__ == '__main__':
     print("="*70)
     print("\n💡 Press CTRL+C to stop the server\n")
     
+    port = int(os.getenv('PORT', 5000))
     # Run Flask
     app.run(
         host='0.0.0.0',  # Listen on all network interfaces
         port=5000,        # Port number
-        debug=True,        # Enable debug mode (shows detailed errors)
+        debug=False,        # Enable debug mode (shows detailed errors)
         threaded=True,        # ← ADD THIS for concurrent requests!
         use_reloader=False  
     )
