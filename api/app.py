@@ -646,7 +646,9 @@ def internal_error(error):
         'message': str(error)
     }), 500
 
-
+# Initialize the system (load model and database)
+initialize_system()
+    
 
 if __name__ == '__main__':
     """
@@ -662,8 +664,6 @@ if __name__ == '__main__':
     print("STARTING INTELLIGENT CONTENT RETRIEVAL SYSTEM API")
     print("="*70 + "\n")
     
-    # Initialize the system (load model and database)
-    initialize_system()
     
     # Start the Flask server
     print("\n🌐 Starting Flask API server...")
