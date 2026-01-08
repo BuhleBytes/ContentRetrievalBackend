@@ -267,6 +267,7 @@ def health_check():
             'database_loaded': db_status,
             'document_count': doc_count,
             'model_name': 'all-mpnet-base-v2',
+            'updated':'updated'
             'embedding_dimensions': 768
         })
     
