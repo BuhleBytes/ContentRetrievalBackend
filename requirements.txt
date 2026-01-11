@@ -5,6 +5,5 @@ sentence-transformers>=2.0.0
 torch>=2.0.0
 numpy>=1.24.0
 gunicorn>=21.0.0
-pip install anthropic python-dotenv
-pip freeze > requirements.txt
-
+anthropic>=0.40.0
+python-dotenv>=1.0.0
