@@ -424,7 +424,8 @@ def semantic_search():
                     'auto_enhanced': enhancement_result['auto_enhanced'],
                     'pending_enhancement': enhancement_result['pending_enhancement'],
                     'total_tokens': enhancement_result['total_tokens'],
-                    'cost_estimate': enhancement_result['cost_estimate']
+                    'cost_estimate': enhancement_result['cost_estimate'],
+                    'relevance_summary': enhancement_result['relevance_summary']
                 }
                 
             except Exception as e:
@@ -621,7 +622,7 @@ def hybrid_search():
                     'auto_enhanced': enhancement_result['auto_enhanced'],
                     'pending_enhancement': enhancement_result['pending_enhancement'],
                     'total_tokens': enhancement_result['total_tokens'],
-                    'cost_estimate': enhancement_result['cost_estimate']
+                    'cost_estimate': enhancement_result['cost_estimate'],
                 }
                 
             except Exception as e:
